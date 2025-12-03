@@ -1,4 +1,4 @@
-package or.sopt.week0;
+package or.sopt.week0.recursion;
 
 import java.io.BufferedReader;
 import java.io.IOException;
