@@ -1,2 +1,4 @@
-package or.sopt.week1;public class 도파_문자열 {
+package or.sopt.week1;
+
+public class 도파_문자열 {
 }
