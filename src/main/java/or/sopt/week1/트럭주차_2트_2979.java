@@ -6,6 +6,12 @@ import java.io.*;
 
 public class 트럭주차_2트_2979 {
 
+    /**
+     * 도착한 시간 -> 끝난 시간
+     *
+     * 이라는 공식이 존재할때는 항상 "이상"과 "미만"을 가정해라
+     * for문 돌릴때 시작 i를 포함하고 도착시간을 포함시키지 말라는거임
+     * */
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
