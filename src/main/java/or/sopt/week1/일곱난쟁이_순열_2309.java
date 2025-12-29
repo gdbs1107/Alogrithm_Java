@@ -3,7 +3,7 @@ package or.sopt.week1;
 import java.io.*;
 import java.util.*;
 
-public class 일곱난쟁이_순열 {
+public class 일곱난쟁이_순열_2309 {
 
     static int[] arr = new int[9];
     static int[] pick = new int[7];

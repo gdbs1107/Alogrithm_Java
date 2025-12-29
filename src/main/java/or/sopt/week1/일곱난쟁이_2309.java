@@ -1,10 +1,12 @@
 package or.sopt.week1;
+
 import java.io.*;
 import java.util.*;
 
-public class 일곱난쟁이 {
+public class 일곱난쟁이_2309 {
 
     /**
+     * 2309
      *
      * 1. main문 까먹음 븅신
      * 2. java.io.* 임포트해라
