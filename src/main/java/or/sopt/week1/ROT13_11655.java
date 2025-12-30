@@ -5,6 +5,10 @@ import java.io.*;
 
 public class ROT13_11655 {
 
+    /**
+     * 1. 문자열을 수정할때는 반드시 String을 쓰지 말아라~
+     * 2. StringBuilder 내부의 다양한 메서드들
+     * */
     public static void main(String[] args) throws IOException {
 
         // A는 65, a는 97,
