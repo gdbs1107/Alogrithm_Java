@@ -9,6 +9,10 @@ public class 수열_2트_2559 {
 
     /**
      * 떠올리기 힘든 문제는 진짜 아니었던 것 같다
+     *
+     * 사이값을 구하는 문제는 2중 For문을 이용하되, I와 함께 움직이는 j를 가정하자
+     * max 함수를 잘 이용하자
+     * 최솟값을 잘 가정하라 -> int max = Integer.MIN_VALUE;
      * */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

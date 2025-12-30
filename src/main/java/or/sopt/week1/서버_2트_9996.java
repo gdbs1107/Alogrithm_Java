@@ -7,7 +7,11 @@ import java.io.InputStreamReader;
 public class 서버_2트_9996 {
 
     /**
+     * 문제 예시에서 한글자 주었더라도, 꼭 예외케이스를 반드시 상정하자
+     *
      * 1. substring을 적극 사용하자
+     * 2. 다양한 메서드를 알고 있어야하는걸까? -> reverse, substring, find 메서드만 잘 알고 있자
+     * 3. 반례를 생각하자
      * */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -20,6 +24,8 @@ public class 서버_2트_9996 {
 
         for(int i = 0; i < n; i++){
             String input = br.readLine();
+
+            // 이게 반례임
             if(input.length() < head.length() + tail.length()){ // 길이가 짧을 때
                 System.out.println("NE");
                 continue;
