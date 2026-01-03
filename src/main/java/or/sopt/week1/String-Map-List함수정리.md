@@ -42,3 +42,17 @@
 - sort(cmp) : 정렬
 - clear() : 전체 삭제
 - toArray() : 배열로 변환
+
+## Stack
+
+	•	push(x) : 맨 위에 넣기
+	•	pop() : 맨 위 꺼내서 제거(반환)
+	•	peek() : 맨 위 값 확인(제거 X)
+	•	isEmpty() : 비었는지
+	•	size() : 원소 개수
+	•	clear() : 전체 비우기
+	•	search(x) : 위에서부터 몇 번째인지(없으면 -1)
+	•	contains(x) : 포함 여부 (Stack은 Vector 상속이라 가능)
+	•	get(i) : i번째 원소 조회(스택답진 않지만 가끔 디버깅/특수케이스에 씀)
+
+※ 코테 팁: 스택처럼 쓸 거면 Deque(예: ArrayDeque)로도 많이 함 (push/pop/peek 동일 이름 지원).
