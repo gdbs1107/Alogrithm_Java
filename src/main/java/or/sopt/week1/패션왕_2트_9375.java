@@ -11,6 +11,12 @@ public class 패션왕_2트_9375 {
      * -> 결국결국 Map의 내부 메서드인 containsKey()를 활용해야함
      *
      * 옷을 입을 수 있는 경우의 수는 옷의 개수+(각 경우의 수*각 경우의 수)
+     *
+     *
+     *
+     * 주어지는 모든 값이 정말 필요한지 검토하라
+     * 경우의 수 문제는 확률을 곱해서 풀 수 있다 -> 점화식을 뽑아낼 수 있을 듯
+     * 경우의 수는 값이 커질 수 있으므로 long 을 잡고 푸는게 낫다
      * */
 
     public static void main(String[] args) throws IOException{

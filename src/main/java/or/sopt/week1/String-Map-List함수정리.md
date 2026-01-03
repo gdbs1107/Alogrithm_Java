@@ -10,7 +10,7 @@
 - trim() / strip() : 양끝 공백 제거( strip는 유니코드 공백 포함 )
 - replace(a, b) : 치환(문자/문자열)
 - replaceAll(regex, b) / replaceFirst(regex, b) : 정규식 기반 치환
-- split(regex) : 분리
+- split(regex) : 특정 문자를 분리 -> 반환값이 String[] 임
 - isEmpty() : 길이 0
 - isBlank() : 공백만 있어도 true
 - toCharArray() : char[]로 변환
