@@ -59,7 +59,7 @@ public class 당근마켓_승원이_거리 {
 
         // start 방문처리
         visited[start_y][start_x] = 1;
-        // start부터 bfs 시작
+        // start부터 bfs 시작 -> 얘는 재귀가 아니라서 반드시 시작점을 방문처리하고 가야한다
         bfs(start_y, start_x);
 
         System.out.println("정답 = " + visited[end_y][end_x]);
