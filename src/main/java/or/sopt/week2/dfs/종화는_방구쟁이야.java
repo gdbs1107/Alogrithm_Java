@@ -1,4 +1,4 @@
-package or.sopt.week2;
+package or.sopt.week2.dfs;
 
 import java.util.*;
 import java.io.*;
@@ -40,7 +40,7 @@ public class 종화는_방구쟁이야 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        // n이 세로, m이 가로
+        // n이 세로 -> y, m이 가로 -> x
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
 
@@ -51,7 +51,6 @@ public class 종화는_방구쟁이야 {
             StringTokenizer sts = new StringTokenizer(br.readLine());
 
             for (int j=0; j<m; j++){
-
                 int nextToken = Integer.parseInt(sts.nextToken());
 
                 if (nextToken==1){
@@ -85,10 +84,13 @@ public class 종화는_방구쟁이야 {
             int next_y = y+dy[i];
             int next_x = x+dx[i];
 
+            // x와 y가 범위 밖으로 나가지 않도록
             if (0>next_y || n<=next_y || 0>next_x || m<=next_x){
                 continue;
             }
 
+            // 이게 호출이 된다는 것은 그 자체로 "가능"을 의미한ㄷ -> 반대로 호출이 안되면 불가능인 것이니까 해당 좌표에서의 dfs 호출이 종료됐다면
+            // 육지는 끝난거임
             if (arr[next_y][next_x]==1 && !visited[next_y][next_x]){
                 dfs(next_y,next_x);
             }

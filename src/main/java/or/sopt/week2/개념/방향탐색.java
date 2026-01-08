@@ -1,6 +1,4 @@
-package or.sopt.week2;
-
-import java.util.*;
+package or.sopt.week2.개념;
 
 public class 방향탐색 {
 

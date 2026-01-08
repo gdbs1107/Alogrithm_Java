@@ -1,7 +1,6 @@
-package or.sopt.week2;
+package or.sopt.week2.개념;
 
 import java.io.*;
-import java.util.*;
 
 public class 인접행렬_예제문제 {
 

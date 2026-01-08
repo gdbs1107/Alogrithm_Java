@@ -1,4 +1,4 @@
-package or.sopt.week2;
+package or.sopt.week2.개념;
 public class 인접행렬_예제문제_모범답안 {
 
     // 이중 배열을 만들어두고

@@ -1,4 +1,4 @@
-package or.sopt.week2;
+package or.sopt.week2.개념;
 
 import java.util.*;
 import java.io.*;
