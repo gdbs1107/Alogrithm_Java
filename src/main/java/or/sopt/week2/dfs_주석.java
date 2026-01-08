@@ -8,6 +8,8 @@ public class dfs_주석 {
     static ArrayList<ArrayList<Integer>> adj;
 
     // 이건 왜 n+1인거임? -> 우리가 0부터 쓰는게 아니라 1부터 쓰니까 당연하지
+    // 배열을 초기화할때 파라미터가 의미하는 바가 무엇일까 -> 그 인덱스임. 그니까 5넣으면 0~4가 생기는거야. 근데 length를 넣으면 길이가 5가 나온단 말이지
+    // 그러니까 길이와 인덱스를 반드시 잘 구별하라
     static boolean[] visited = new boolean[n+1];
 
     public static void main(String[] args){
