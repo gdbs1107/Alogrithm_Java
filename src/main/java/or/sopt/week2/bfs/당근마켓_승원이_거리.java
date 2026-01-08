@@ -92,6 +92,8 @@ public class 당근마켓_승원이_거리 {
                 // 육지이고 아직 방문한적 없으면 다 큐에 담는다
                 if (arr[next_y][next_x]==1 && visited[next_y][next_x]==0){
                     queue.offer(new Pos(next_y, next_x));
+
+                    // 그 전까지의 가중치를 여기다가 더해주는거니까 같은 가중치에 한해서 거리를 측정 할 수 있게 되는거지
                     visited[next_y][next_x] = visited[now_y][now_x] +1;
                 }
             }
