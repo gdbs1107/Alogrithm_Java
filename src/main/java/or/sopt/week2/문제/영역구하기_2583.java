@@ -3,7 +3,6 @@ package or.sopt.week2.문제;
 import java.util.*;
 import java.io.*;
 
-// 오 뭐야 맞춤
 public class 영역구하기_2583 {
 
     static int[][] arr;
@@ -60,8 +59,10 @@ public class 영역구하기_2583 {
             }
         }
 
+        // 리스트 정렬을 저렇게밖에 할 수 없 -> Collections.sort(result);
         System.out.println(cnt);
-        result.sort(Comparator.naturalOrder());
+        /*result.sort(Comparator.naturalOrder());*/
+        Collections.sort(result);
         for (Integer integer : result) {
             System.out.print(integer+" ");
         }

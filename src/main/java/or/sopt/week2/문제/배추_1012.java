@@ -65,7 +65,7 @@ public class 배추_1012 {
 
             if (0>next_y || 0>next_x || n_y<=next_y || m_x<=next_x) continue;
 
-            if (arr[next_y][next_x]==1 && visited[next_y][next_x]==false){
+            if (arr[next_y][next_x]==1 && !visited[next_y][next_x]){
                 dfs(next_y,next_x);
             }
         }
