@@ -13,6 +13,7 @@ public class 빈도정렬_2트_2910 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int n = Integer.parseInt(st.nextToken()); // 메시지의 길이 N
         int c = Integer.parseInt(st.nextToken()); // 수의 범위 C
+
         List<Integer> list = new ArrayList<>(); // 입력 수열을 저장할 리스트
         st = new StringTokenizer(br.readLine());
 
@@ -24,7 +25,12 @@ public class 빈도정렬_2트_2910 {
         for (int i = 0; i < n; i++) {
             list.add(Integer.parseInt(st.nextToken()));
             original.add(list.get(i));
-            map.put(list.get(i), map.getOrDefault(list.get(i), 0) + 1);
+
+            if (map.containsKey(list.get(i))){
+                map.put(list.get(i), map.get(list.get(i)) + 1);
+            }else {
+                map.put(list.get(i),1);
+            }
         }
 
         // 빈도수를 기준으로 리스트를 정렬
