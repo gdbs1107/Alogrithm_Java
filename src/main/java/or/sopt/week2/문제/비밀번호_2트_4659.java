@@ -5,6 +5,12 @@ import java.io.*;
 
 public class 비밀번호_2트_4659 {
 
+    /**
+     * 1. isVowel() 메서드의 형식을 검토하라
+     * 2. toCharArray(): 문자열을 배열로 반환하는 메서드
+     * 3. for (단일값:배열) -> iteration
+     * */
+
     public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         String password;
