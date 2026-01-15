@@ -1,4 +1,4 @@
 package or.sopt.week2.문제;
 
-public class a_10709 {
+public class a_9012 {
 }
