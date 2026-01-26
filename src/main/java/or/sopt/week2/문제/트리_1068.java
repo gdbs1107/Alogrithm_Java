@@ -21,11 +21,16 @@ public class 트리_1068 {
         visited = new boolean[n + 1];
         parent = new int[n + 1];
 
+        // 리스트 초기화
         for (int i = 0; i < n; i++)
             graph[i] = new ArrayList<>();
         int root = -1;
+
+        // 이제 문자열 받아서 진행하는데
         stk = new StringTokenizer(br.readLine());
         for (int i = 0; i < n; i++) {
+
+            // 하나씩 확인함
             int p = Integer.parseInt(stk.nextToken());
             if (p == -1) {
                 // i 노드가 바로 루트 노드
