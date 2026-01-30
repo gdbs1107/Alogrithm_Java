@@ -27,13 +27,12 @@ public class 홍철이 {
             }
         }
 
-        dfs(0,0,0);
+        dfs(0,0);
         System.out.println(result);
     }
 
-    static void dfs(int y, int x, int money){
-        money += arr[y][x];
-        result.add(money);
+    static void dfs(int y, int x){
+        result.add(arr[y][x]);
         visited[y][x] = true;
 
         for (int i=0; i<4; i++){
@@ -43,7 +42,7 @@ public class 홍철이 {
             if (next_y < 0 || next_x < 0 || next_y >= 3 || next_x >= 3) continue;
 
             if (!visited[next_y][next_x]){
-                dfs(next_y, next_x,money);
+                dfs(next_y, next_x);
             }
         }
 
