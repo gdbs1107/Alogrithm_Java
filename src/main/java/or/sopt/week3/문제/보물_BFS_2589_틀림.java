@@ -35,9 +35,13 @@ public class 보물_BFS_2589_틀림 {
             for (int j = 0; j < m; j++) {
                 if (arr[i][j].equals("L")) {
                     visited = new boolean[n][m];
+
+                    // 이게 틀림 포인트
+                    int[][] dist = new int[n][m];
                     cnt = 0;
                     Queue<Pos> queue = new LinkedList<>();
                     queue.offer(new Pos(i, j));
+                    dist[i][j] = 0;
 
                     while (!queue.isEmpty()){
                         Pos pos = queue.poll();
@@ -52,7 +56,10 @@ public class 보물_BFS_2589_틀림 {
                             if (arr[next_y][next_x].equals("L") && !visited[next_y][next_x]){
                                 queue.offer(new Pos(next_y,next_x));
                                 visited[next_y][next_x] = true;
-                                cnt++;
+
+                                // 1 증가
+                                dist[next_y][next_x] = dist[y][x] + 1;
+                                cnt = Math.max(cnt, dist[next_y][next_x]);
                             }
                         }
                     }
