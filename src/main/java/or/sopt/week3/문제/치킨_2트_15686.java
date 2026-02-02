@@ -7,6 +7,14 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
+/**
+ * 1. 리스트를 전부 받는다
+ * 2. 리스트에서 치킨집과 집의 위치를 미리 저장해둔다
+ * 3. 반복문을 돌면서 치킨집 세 개를 선택한다
+ * 4. 치킨집과 모든 집과의 거리를 계산한다
+ * 5. 집들 중 가장 가까운 집의 거리를 구해서 더한다
+ * 6. 그리고 그 거리 중의 최소값을 구한다
+ * */
 public class 치킨_2트_15686 {
 
     static int N, M;
@@ -46,15 +54,21 @@ public class 치킨_2트_15686 {
     static void back(int depth, int start) {
         if (depth == M) { // M개를 뽑아서 selected 리스트에 M개 저장이 끝났다면
             int sum = 0;
-            for (int[] h : house) { // 모든 집들과 치킨집과의 최소거리를 계산
+
+            // 각 집마다 선택된 M개의 치킨집과의 거리를 계산함
+            for (int[] h : house) {
                 int min = Integer.MAX_VALUE;
-                for (int[] s : selected) { // 선택한 M개의 치킨집과 집의 거리를 계산해 최소거리를 구함
+                for (int[] s : selected) {
                     int d = Math.abs(h[0] - s[0]) + Math.abs(h[1] - s[1]);
                     min = Math.min(d, min);
                 }
-                sum += min; // 그렇게 구한 최소거리를 sum에 저장
+
+                // 그렇게 구한 최소거리를 sum에 저장
+                sum += min;
             }
-            result = Math.min(result, sum); // 그렇게 구한 sum들중에 최소값만 저장
+
+            // 그렇게 구한 sum들중에 최소값만 저장
+            result = Math.min(result, sum);
             return;
         }
 
