@@ -18,12 +18,12 @@ public class 문자_1157 {
         for (int i=0; i<input.length(); i++){
             char c = input.charAt(i);
 
-            // 대문자라면 96~122
+            // 소문자 97~122
             if (96<c && 123>c){
                 arr[c - 97]++;
             }
 
-            // 소문자라면 65~90
+            // 대문자 65~90
             if (64<c && 91>c){
                 arr[c-65]++;
             }
