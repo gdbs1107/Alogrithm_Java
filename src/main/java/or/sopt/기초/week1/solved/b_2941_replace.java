@@ -1,4 +1,4 @@
-package or.sopt.기초.week1;
+package or.sopt.기초.week1.solved;
 
 import java.io.*;
 
