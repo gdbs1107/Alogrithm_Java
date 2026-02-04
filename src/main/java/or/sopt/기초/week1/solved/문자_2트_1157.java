@@ -1,6 +1,5 @@
-package or.sopt.기초.week1;
+package or.sopt.기초.week1.solved;
 
-import java.util.*;
 import java.io.*;
 
 public class 문자_2트_1157 {

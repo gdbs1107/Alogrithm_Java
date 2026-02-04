@@ -56,3 +56,32 @@
 	•	get(i) : i번째 원소 조회(스택답진 않지만 가끔 디버깅/특수케이스에 씀)
 
 ※ 코테 팁: 스택처럼 쓸 거면 Deque(예: ArrayDeque)로도 많이 함 (push/pop/peek 동일 이름 지원).
+
+## Array (배열)
+
+### 기본
+- length : 배열 길이 (필드, 메서드 아님)
+- arr[i] : i번째 요소 접근
+- Arrays.toString(arr) : 배열을 문자열로 출력(디버깅용)
+- Arrays.equals(a, b) : 배열 내용 비교
+- Arrays.copyOf(arr, n) : 길이 n으로 복사
+- Arrays.copyOfRange(arr, from, to) : 구간 복사(to 미포함)
+- arr.clone() : 얕은 복사(1차원은 실사용 OK)
+
+### 정렬 / 탐색
+- Arrays.sort(arr) : 오름차순 정렬
+- Arrays.sort(arr, from, to) : 부분 정렬
+- Arrays.binarySearch(arr, x) : 이진 탐색(정렬된 상태 필수)
+
+### 채우기 / 초기화
+- Arrays.fill(arr, x) : 전체를 x로 채움
+- Arrays.fill(arr, from, to, x) : 구간 채우기
+
+### 다차원 배열
+- Arrays.deepToString(arr) : 다차원 배열 출력
+- Arrays.deepEquals(a, b) : 다차원 배열 비교
+
+※ 코테 팁:
+- primitive 배열은 null 체크보다 범위 체크가 중요
+- Arrays.binarySearch는 음수 반환 규칙 주의
+- 2차원 이상에서 clone()은 얕은 복사이므로 직접 복사 필요
