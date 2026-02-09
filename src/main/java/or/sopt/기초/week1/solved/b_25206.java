@@ -1,4 +1,4 @@
-package or.sopt.기초.week1.unsolved;
+package or.sopt.기초.week1.solved;
 
 import java.util.*;
 import java.io.*;
