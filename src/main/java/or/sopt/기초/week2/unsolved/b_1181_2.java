@@ -1,4 +1,4 @@
-package or.sopt.기초.week2.solved;
+package or.sopt.기초.week2.unsolved;
 
 import java.util.*;
 import java.io.*;
@@ -87,6 +87,19 @@ public class b_1181_2 {
          *                 dest[i] = src[q++];
          *         }
          *     }
+         *
+         *
+         *
+         *     3. 왜 반환값이 int일까?
+         *     로직을 생각해보면 다음과 같음.
+         *     compare(o1,o2) 일때 o1-o2을 반환하는 것임 -> 그러니까 만약 1,2 의 순서로 되어있다면 반환값이 -1
+         *     즉 순서를 바꾸지 않는다 라는 응답이 되는 것임
+         *
+         *      그러니까 우리가 만약 정렬을 직접 구현한다면
+         *      순서를 바꾸고 싶을 때 1을 반환
+         *      안바꾸고 싶을 때 -1을 반환
+         *
+         *      하도록 구현하면 되는 것이다
          * */
         Arrays.sort(arr, new Comparator<String>() {
 
