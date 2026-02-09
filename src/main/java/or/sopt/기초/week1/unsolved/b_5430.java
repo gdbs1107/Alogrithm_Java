@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.ArrayDeque;
 
+// 로직 자체에서 틀리진 않았음 -> 다만 시간초과 deque를 활용
 public class b_5430 {
 
     public static Scanner in = new Scanner(System.in);
