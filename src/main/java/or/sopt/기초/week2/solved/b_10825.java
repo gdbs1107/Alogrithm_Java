@@ -50,13 +50,10 @@ public class b_10825{
                         if (p1.math == p2.math){
                             return p1.name.compareTo(p2.name);
                         }
-
                         return p2.math - p1.math;
                     }
-
                     return p1.english - p2.english;
                 }
-
                 // 국어는 내림차순
                 return p2.korean - p1.korean;
             }
