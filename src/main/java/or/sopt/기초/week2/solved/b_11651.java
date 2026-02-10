@@ -1,9 +1,9 @@
-package or.sopt.기초.week2.unsolved;
+package or.sopt.기초.week2.solved;
 
 import java.util.*;
 import java.io.*;
 
-public class b_11650 {
+public class b_11651 {
 
     static class Pos{
         int x;
@@ -33,12 +33,12 @@ public class b_11650 {
         Arrays.sort(arr,new Comparator<Pos>(){
             @Override
             public int compare(Pos p1, Pos p2){
-                if (p1.x==p2.x){
+                if (p1.y==p2.y){
                     // 둘이 같으면 y가 증가하는순
-                    return p1.y-p2.y;
+                    return p1.x-p2.x;
                 }
 
-                return p1.x-p2.x;
+                return p1.y-p2.y;
             }
         });
 
