@@ -3,6 +3,10 @@ package or.sopt.큰돌.week3.문제;
 import java.util.*;
 import java.io.*;
 
+/**
+ * 반드시 그래프 문제에만 dfs/bfs가 쓰이는게 아니다
+ * 이런 문제에도 쓰일 수 있다는 것
+ * */
 public class b_E_2_12869 {
 
     static class Pos{
