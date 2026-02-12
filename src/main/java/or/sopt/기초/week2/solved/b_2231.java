@@ -1,6 +1,5 @@
-package or.sopt.기초.week2.unsolved;
+package or.sopt.기초.week2.solved;
 
-import java.util.*;
 import java.io.*;
 
 public class b_2231{
