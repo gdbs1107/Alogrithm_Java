@@ -3,6 +3,8 @@ package or.sopt.기초;
 import java.util.*;
 import java.io.*;
 
+
+// 다음부턴 그냥 sort를 쓰자
 public class b_4153 {
     public static void main(String[] args)throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
