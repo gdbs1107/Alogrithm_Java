@@ -9,6 +9,20 @@ public class b1463 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
 
+        while (n!=1){
 
+            // 3으로 떨어지는 경우
+            if (n%3==0){
+
+            }
+
+            // 2로 떨어지는 경우
+            if (n%2==0){
+
+            }
+
+
+        }
     }
+
 }
