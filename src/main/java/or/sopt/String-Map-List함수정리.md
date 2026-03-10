@@ -45,17 +45,35 @@
 
 ## Stack
 
-	•	push(x) : 맨 위에 넣기
-	•	pop() : 맨 위 꺼내서 제거(반환)
-	•	peek() : 맨 위 값 확인(제거 X)
-	•	isEmpty() : 비었는지
-	•	size() : 원소 개수
-	•	clear() : 전체 비우기
-	•	search(x) : 위에서부터 몇 번째인지(없으면 -1)
-	•	contains(x) : 포함 여부 (Stack은 Vector 상속이라 가능)
-	•	get(i) : i번째 원소 조회(스택답진 않지만 가끔 디버깅/특수케이스에 씀)
+- push(x) : 맨 위에 넣기
+- pop() : 맨 위 꺼내서 제거(반환)
+- peek() : 맨 위 값 확인(제거 X)
+- isEmpty() : 비었는지
+- size() : 원소 개수
+- clear() : 전체 비우기
+- search(x) : 위에서부터 몇 번째인지(없으면 -1)
+- contains(x) : 포함 여부 (Stack은 Vector 상속이라 가능)
+- get(i) : i번째 원소 조회(스택답진 않지만 가끔 디버깅/특수케이스에 씀)
 
 ※ 코테 팁: 스택처럼 쓸 거면 Deque(예: ArrayDeque)로도 많이 함 (push/pop/peek 동일 이름 지원).
+
+## Queue (주로 LinkedList, ArrayDeque)
+
+- offer(x) : 큐 뒤에 삽입 (실패 시 false 반환)
+- add(x) : 큐 뒤에 삽입 (실패 시 예외 발생)
+- poll() : 맨 앞 요소 제거 후 반환 (없으면 null)
+- remove() : 맨 앞 요소 제거 후 반환 (없으면 예외)
+- peek() : 맨 앞 요소 조회 (제거 X, 없으면 null)
+- element() : 맨 앞 요소 조회 (제거 X, 없으면 예외)
+- isEmpty() : 비었는지
+- size() : 원소 개수
+- clear() : 전체 삭제
+- contains(x) : 포함 여부
+
+※ 코테 팁:
+- Queue<Integer> q = new ArrayDeque<>();
+- BFS에서는 offer() / poll() / peek() 조합을 가장 많이 사용함
+- LinkedList도 Queue 구현체지만 성능상 ArrayDeque를 더 많이 사용
 
 ## Array (배열)
 
