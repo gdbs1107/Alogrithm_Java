@@ -20,8 +20,75 @@ import java.io.*;
  * */
 public class b7576 {
 
+    static int[][] map;
+    static boolean[][] visited;
+    static int result = 0;
+    static int[] dy = {-1,0,1,0};
+    static int[] dx = {0,1,0,-1};
+    static int n;
+    static int m;
+    static Queue<int[]> queue = new LinkedList<>();
+
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        m = Integer.parseInt(st.nextToken());
+        n = Integer.parseInt(st.nextToken());
+
+        map = new int[n][m];
+        visited = new boolean[n][m];
+
+        for (int i=0; i<n; i++){
+            st = new StringTokenizer(br.readLine());
+            for (int j=0; j<m; j++){
+                map[i][j] = Integer.parseInt(st.nextToken());
+            }
+        }
+
+        for (int i=0; i<n; i++){
+            for (int j=0; j<m; j++){
+
+                if (map[i][j]==1 && !visited[i][j]){
+                    for (int i=0; i<4; i++){
+                        y = i+dy[i];
+                        x = j+dx[i];
+
+                        if (map[y][x]==0) {
+                            map[y][x]=1;
+                            visited[y][x] = true;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    static void bfs(){
+
+        while (!queue.isEmpty()){
+            int[] cur = queue.poll();
+            int y = cur[0];
+            int x = cur[0];
+
+            // 현재 칸이 1이면 주변에 있는 칸들을 1로 만든다
+            // 그리고 방문처리한다
+            if (map[y][x]==1){
+                for (int i=0; i<4; i++){
+                    int next_y = y+dy[i];
+                    int next_x = x+dx[i];
+
+                    if (next_y<0 || next_x<0 || next_y>=n; next_x>=m) continue;
+                    if (!visited[next_y][next_x]){
+                        visited[next_y][next_x] = true;
+                        if (map[next_y][next_x]==0) map[next_y][next_x] = 1;
+                    }
+
+                }
+            }
+
+
+        }
     }
 
 }
