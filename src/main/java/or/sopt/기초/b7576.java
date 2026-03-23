@@ -1,9 +1,10 @@
+/*
 package or.sopt.기초;
 
 import java.util.*;
 import java.io.*;
 
-/**
+*
  * depth를 구하는 문제인데, 토마토가 사방향에 있는 토마토를 1로 만든다
  * 그러면 dfs인 것 같긴한데
  *
@@ -17,7 +18,8 @@ import java.io.*;
  * -1이면 안감
  *
  * 아니지 그냥 depth만 가져가면
- * */
+ *
+
 public class b7576 {
 
     static int[][] map;
@@ -92,3 +94,4 @@ public class b7576 {
     }
 
 }
+*/
