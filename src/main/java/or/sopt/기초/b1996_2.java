@@ -1,4 +1,4 @@
-package or.sopt.기초.b1996;
+package or.sopt.기초;
 
 import java.util.*;
 import java.io.*;
