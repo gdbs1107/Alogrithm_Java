@@ -27,11 +27,62 @@ public class b2531 {
      * 연속함 + 쿠폰에 적힌 초밥이 아니어야함 (그래야 추가로 더 받으니까)
      *
      * 그럼 슬라이딩 윈도우를 써서 k개가 연속하는 경우를 받고
+     * 하나의 슬라이드에서 무엇을 검증해야하는지 확인해야함
+     * 1. 초밥의 가짓수가 max인지
+     * 2. c초밥이 포함되어 있진 않은
+     * 초밥 가짓수가 MAX면
      *
      * */
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
+        // 초밥의 가짓수
+        int n = Integer.parseInt(st.nextToken());
+        // 초밥 갯수
+        int d = Integer.parseInt(st.nextToken());
+        // 연속해서 먹는 초밥수
+        int k = Integer.parseInt(st.nextToken());
+        // 쿠폰 번호
+        int c = Integer.parseInt(st.nextToken());
+
+        int[] cho = new int[n];
+        for (int i=0; i<n; i++){
+            cho[i] = Integer.parseInt(br.readLine());
+        }
+
+        // 최대 초밥의 가짓수 정리(이게 정답)
+        int res = 0;
+        int start = 1;
+        int end = k;
+
+        ArrayList<Integer> temp = new ArrayList<>();
+        for (int i=0; i<k; i++){
+            temp.add(cho[i]);
+        }
+
+        while (start != n) {
+            if (end > n) end = end % n;
+
+            // 이전에 있던걸 지우고
+            temp.remove(cho[start - 1]);
+            // 새로운 end를 넣는다
+            if (!temp.contains(cho[end])) temp.add(cho[end]);
+
+            // 만약 k를 포함하고 있다면 최대 가짓수가 될 수 없음
+            if (temp.contains(c)) {
+                start++;
+                end++;
+                continue;
+            }
+
+
+            res = Math.max(temp.size()+1, res);
+            start++;
+            end++;
+        }
+
+        System.out.print(res);
     }
 
 }
